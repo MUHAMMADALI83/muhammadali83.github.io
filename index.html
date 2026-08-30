@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Ali — Data Analyst &amp; ML Enthusiast | Lahore, Pakistan</title>
+<meta name="description" content="Muhammad Ali is a data analyst and aspiring ML practitioner in Lahore, Pakistan, working with Python, Pandas, SQL and Scikit-learn — open to remote, contract and internship roles.">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://muhammadali83.github.io/">
+<meta name="author" content="Muhammad Ali">
+<meta name="keywords" content="Muhammad Ali, data analyst, data science, machine learning, Python, Pandas, SQL, Scikit-learn, Lahore, Pakistan, portfolio">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://muhammadali83.github.io/">
+<meta property="og:title" content="Muhammad Ali — Data Analyst & ML Enthusiast">
+<meta property="og:description" content="Data analyst and aspiring ML practitioner in Lahore, Pakistan — Python, Pandas, SQL and Scikit-learn, open to remote work.">
+<meta property="og:site_name" content="Muhammad Ali — Portfolio">
+<meta property="og:image" content="https://muhammadali83.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Muhammad Ali — Data Analyst & ML Enthusiast">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Ali — Data Analyst & ML Enthusiast">
+<meta name="twitter:description" content="Data analyst and aspiring ML practitioner in Lahore, Pakistan — Python, Pandas, SQL and Scikit-learn, open to remote work.">
+<meta name="twitter:image" content="https://muhammadali83.github.io/assets/og-image.jpg">
+
+<meta name="theme-color" content="#131316">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Ali",
+  "url": "https://muhammadali83.github.io/",
+  "image": "https://muhammadali83.github.io/assets/profile.jpg",
+  "jobTitle": "Data Analyst",
+  "email": "mailto:alimuhammadmaqbool83@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+  "sameAs": [
+    "https://github.com/MUHAMMADALI83",
+    "https://kaggle.com/alimuhammad83",
+    "https://linkedin.com/in/muhammadali-748114368"
+  ]
+}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23131316'/%3E%3Ccircle cx='50' cy='50' r='26' fill='%2310B981'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root { --accent: #10B981; --ink: #131316; --paper: #FAFAF8; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  html, body { overflow-x: clip; }
+  body { background: var(--paper); color: var(--ink); }
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* ---------- scrollbar ---------- */
+  ::-webkit-scrollbar { width: 9px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(19,19,22,.18); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(19,19,22,.32); }
+
+  /* ---------- eyebrow ---------- */
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: rgba(19,19,22,.5); }
+
+  /* ---------- ghost numbers ---------- */
+  .ghost-num {
+    -webkit-text-stroke: 1px rgba(19,19,22,.09);
+    color: transparent;
+    user-select: none;
+    pointer-events: none;
+  }
+  .ghost-num-light { -webkit-text-stroke: 1px rgba(255,255,255,.09); }
+
+  /* ---------- nav ---------- */
+  #nav { transition: background .5s ease, border-color .5s ease, box-shadow .5s ease, backdrop-filter .5s ease; border-bottom: 1px solid transparent; }
+  #nav.nav-scrolled { background: rgba(250,250,248,.78); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom-color: rgba(19,19,22,.06); }
+
+  .nav-link { position: relative; color: rgba(19,19,22,.5); transition: color .35s ease; }
+  .nav-link .num { color: var(--accent); }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; height:1px; width:100%; background: var(--ink); transform: scaleX(0); transform-origin: right; transition: transform .45s cubic-bezier(.16,1,.3,1); }
+  .nav-link:hover, .nav-link.active { color: var(--ink); }
+  .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
+
+  /* ---------- loader ---------- */
+  #loader { transition: transform .9s cubic-bezier(.83,0,.17,1) .15s; }
+  #loader.loader-done { transform: translateY(-101%); }
+  #loader-inner { transition: opacity .5s ease, transform .5s ease; }
+  #loader.loader-done #loader-inner { opacity: 0; transform: translateY(-12px); }
+  .loader-bar span { display:block; height:100%; background: var(--accent); width:0; animation: loaderFill 1.35s cubic-bezier(.65,0,.35,1) forwards; }
+  @keyframes loaderFill { to { width: 100%; } }
+
+  /* ---------- hero line masks ---------- */
+  .line-mask { display:block; overflow:hidden; padding-bottom: .06em; margin-bottom: -.06em; }
+  .line-mask-inner { display:block; transform: translateY(112%); transition: transform 1.15s cubic-bezier(.16,1,.3,1); }
+  body.is-loaded .line-mask-inner { transform: translateY(0); }
+
+  /* ---------- reveal on scroll ---------- */
+  [data-reveal] { opacity: 0; transform: translateY(30px); transition: opacity .95s cubic-bezier(.16,1,.3,1), transform .95s cubic-bezier(.16,1,.3,1); will-change: opacity, transform; }
+  [data-reveal].is-visible { opacity: 1; transform: none; }
+
+  /* ---------- typewriter caret ---------- */
+  .caret { display:inline-block; width:2px; height:1em; margin-left:2px; background: var(--accent); vertical-align: -0.12em; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---------- marquee ---------- */
+  .marquee { overflow: hidden; }
+  .marquee-track { display:flex; width:max-content; animation: marquee 34s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee-group { display:flex; align-items:center; gap:2.5rem; padding-right:2.5rem; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* ---------- cursor ---------- */
+  @media (hover:hover) and (pointer:fine) {
+    .has-cursor, .has-cursor a, .has-cursor button { cursor: none; }
+  }
+  #cursor-dot {
+    position: fixed; left:0; top:0; width:6px; height:6px; margin:-3px 0 0 -3px;
+    border-radius:999px; background: var(--accent); pointer-events:none; z-index:90;
+    transform: translate(-99px,-99px); will-change: transform;
+  }
+  #cursor-ring {
+    position: fixed; left:0; top:0; width:36px; height:36px; margin:-18px 0 0 -18px;
+    border:1px solid rgba(19,19,22,.18); border-radius:999px; pointer-events:none; z-index:89;
+    transform: translate(var(--x, -99px), var(--y, -99px));
+    transition: scale .35s cubic-bezier(.16,1,.3,1), border-color .35s ease, background .35s ease;
+    will-change: transform;
+  }
+  #cursor-ring.cursor-grow { scale: 1.7; border-color: rgba(16,185,129,.55); background: rgba(16,185,129,.06); }
+
+  /* ---------- sparkline ---------- */
+  .spark-accent { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 2.2s cubic-bezier(.65,0,.35,1) forwards .5s; }
+  .spark-dot { opacity:0; animation: dotIn .5s ease forwards 2.65s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes dotIn { to { opacity: 1; } }
+
+  /* ---------- timeline ---------- */
+  .timeline-line { transform-origin: top; transform: scaleY(0); transition: transform 1.7s cubic-bezier(.16,1,.3,1) .15s; }
+  #timeline.is-visible .timeline-line { transform: scaleY(1); }
+
+  /* ---------- about bars ---------- */
+  .bar { transform-origin: bottom; transform: scaleY(.05); transition: transform 1.2s cubic-bezier(.16,1,.3,1); }
+  #about-chart.in .bar { transform: scaleY(1); }
+
+  /* ---------- scroll hint ---------- */
+  .scroll-line { overflow:hidden; }
+  .scroll-line span { display:block; height:100%; width:100%; background: var(--accent); transform: translateY(-100%); animation: scrollY 1.9s cubic-bezier(.65,0,.35,1) infinite; }
+  @keyframes scrollY { 0% { transform: translateY(-100%); } 55%, 100% { transform: translateY(100%); } }
+
+  /* ---------- burger ---------- */
+  .burger-line { position:absolute; width:22px; height:1.5px; background: var(--ink); transition: transform .4s cubic-bezier(.16,1,.3,1), opacity .3s ease; }
+  .burger-line:nth-child(1) { transform: translateY(-4px); }
+  .burger-line:nth-child(2) { transform: translateY(4px); }
+  #burger.open .burger-line:nth-child(1) { transform: rotate(45deg); }
+  #burger.open .burger-line:nth-child(2) { transform: rotate(-45deg); }
+  #burger.open .burger-line:nth-child(2) { opacity:0; }
+
+  /* ---------- mobile menu ---------- */
+  #mobile-menu { opacity:0; visibility:hidden; pointer-events:none; transition: opacity .45s ease, visibility .45s ease; }
+  #mobile-menu.open { opacity:1; visibility:visible; pointer-events:auto; }
+  .m-link { opacity:0; transform: translateY(26px); transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--i) * 70ms); }
+  #mobile-menu.open .m-link { opacity:1; transform:none; }
+
+  /* ---------- to top ---------- */
+  #to-top { opacity:0; pointer-events:none; transition: opacity .4s ease, transform .4s ease, background .3s ease; }
+  #to-top.show { opacity:1; pointer-events:auto; }
+  #to-top:hover { background: var(--ink); color: var(--paper); }
+
+  /* ---------- hero bg ---------- */
+  .hero-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(19,19,22,.08) 1px, transparent 0);
+    background-size: 30px 30px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 32%, black, transparent);
+    mask-image: radial-gradient(ellipse 85% 75% at 50% 32%, black, transparent);
+  }
+  .hero-glow { background: radial-gradient(circle at 78% 18%, rgba(16,185,129,.13), transparent 55%); }
+
+  /* ---------- cards ---------- */
+  .card-lift { transition: transform .55s cubic-bezier(.16,1,.3,1), box-shadow .55s ease, border-color .45s ease, background .45s ease; }
+  .card-lift:hover { transform: translateY(-6px); box-shadow: 0 32px 60px -28px rgba(19,19,22,.18); }
+
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    [data-reveal], .line-mask-inner, .timeline-line, .bar { opacity: 1 !important; transform: none !important; }
+    .timeline-line { transform: scaleY(1) !important; }
+    .spark-accent { stroke-dashoffset: 0 !important; }
+    #loader { display: none !important; }
+    .marquee-track { animation: none !important; }
+  }
+</style>
+</head>
+
+<body class="font-sans text-ink antialiased">
+
+  <!-- ============ PRELOADER ============ -->
+  <div id="loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-ink text-paper">
+    <div id="loader-inner" class="w-60 text-center">
+      <p class="font-mono text-[10px] uppercase tracking-[0.35em] text-paper/50">Portfolio</p>
+      <p class="mt-3 font-display text-3xl italic">Muhammad Ali</p>
+      <div class="loader-bar mt-7 h-px w-full bg-paper/10"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div id="progress" class="fixed top-0 left-0 z-[70] h-[2px] w-0 bg-accent"></div>
+
+  <!-- ============ NAV ============ -->
+  <header id="nav" class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
+      <a href="#top" class="flex items-center gap-3"><span class="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full border border-accent/40"><img src="assets/avatar.jpg" alt="Muhammad Ali" class="h-full w-full object-cover"></span><span class="font-display text-xl tracking-tight">Muhammad Ali<span class="text-accent">.</span></span></a>
+
+      <nav class="hidden items-center gap-7 font-mono text-[11px] uppercase tracking-[0.18em] md:flex" aria-label="Primary">
+        <a class="nav-link" href="#about"><span class="num">01</span>&nbsp;About</a>
+        <a class="nav-link" href="#experience"><span class="num">02</span>&nbsp;Experience</a>
+        <a class="nav-link" href="#skills"><span class="num">03</span>&nbsp;Skills</a>
+        <a class="nav-link" href="#portfolio"><span class="num">04</span>&nbsp;Work</a>
+        <a class="nav-link" href="#education"><span class="num">05</span>&nbsp;Education</a>
+        <a class="nav-link" href="#contact"><span class="num">06</span>&nbsp;Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <span class="hidden items-center gap-2 border border-ink/10 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/60 md:inline-flex">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+          </span>
+          Open to work
+        </span>
+        <button id="burger" aria-label="Toggle menu" aria-expanded="false" class="relative z-[60] flex h-11 w-11 items-center justify-center md:hidden">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-3 bg-paper">
+    <a class="m-link font-display text-4xl tracking-tight" href="#about" style="--i:0">About</a>
+    <a class="m-link font-display text-4xl tracking-tight" href="#experience" style="--i:1">Experience</a>
+    <a class="m-link font-display text-4xl tracking-tight" href="#skills" style="--i:2">Skills</a>
+    <a class="m-link font-display text-4xl tracking-tight" href="#portfolio" style="--i:3">Work</a>
+    <a class="m-link font-display text-4xl tracking-tight" href="#education" style="--i:4">Education</a>
+    <a class="m-link font-display text-4xl tracking-tight" href="#contact" style="--i:5">Contact</a>
+    <a class="m-link mt-8 font-mono text-xs text-ink/50 hover:text-ink" href="mailto:alimuhammadmaqbool83@gmail.com" style="--i:6">alimuhammadmaqbool83@gmail.com</a>
+    <div class="m-link mt-2 flex gap-6 font-mono text-[11px] uppercase tracking-widest text-ink/40" style="--i:7">
+      <a href="https://github.com/MUHAMMADALI83" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://kaggle.com/alimuhammad83" target="_blank" rel="noopener noreferrer">Kaggle</a>
+      <a href="https://linkedin.com/in/muhammadali-748114368" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-28 pb-16">
+      <div class="hero-grid absolute inset-0" aria-hidden="true"></div>
+      <div class="hero-glow absolute inset-0" aria-hidden="true"></div>
+
+      <div class="relative mx-auto w-full max-w-6xl px-6 md:px-10">
+        <!-- avatar chip -->
+        <div class="mb-6 flex items-center gap-4" data-reveal>
+          <span class="relative inline-flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-accent/50 shadow-lg shadow-ink/10 md:h-16 md:w-16">
+            <img src="assets/avatar.jpg" alt="Muhammad Ali" class="h-full w-full object-cover">
+          </span>
+          <span class="h-8 w-px bg-ink/10" aria-hidden="true"></span>
+          <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-ink/40">Hey, I&rsquo;m Ali —<br class="hidden sm:block"> nice to meet you</p>
+        </div>
+
+        <!-- meta row -->
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/50" data-reveal style="transition-delay:.06s">
+          <span class="flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+            </span>
+            Available for AI evaluation · Data analysis
+          </span>
+          <span class="hidden sm:inline">Lahore, PK</span>
+          <span id="clock" class="hidden sm:inline">--:--:--</span>
+        </div>
+
+        <!-- name -->
+        <h1 class="mt-8 font-display font-medium leading-[0.95] tracking-[-0.03em] text-[clamp(3.4rem,11vw,8.5rem)]">
+          <span class="line-mask"><span class="line-mask-inner" style="transition-delay:.12s">Muhammad</span></span>
+          <span class="line-mask"><span class="line-mask-inner" style="transition-delay:.22s"><em class="italic text-accent">Ali</em>.</span></span>
+        </h1>
+
+        <!-- typewriter -->
+        <p class="mt-6 flex items-center gap-3 font-mono text-sm text-ink/70 md:text-base" data-reveal style="transition-delay:.4s">
+          <span class="text-accent">$</span><span id="type-target"></span><span class="caret"></span>
+        </p>
+
+        <!-- summary + CTAs -->
+        <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <p class="max-w-xl text-base leading-relaxed text-ink/60 md:text-lg" data-reveal style="transition-delay:.5s">
+            Detail-oriented data professional turning raw data into clear stories — Python, Pandas, SQL and Scikit-learn at the core, with a structured, reproducible approach to every analysis.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 lg:justify-end" data-reveal style="transition-delay:.55s">
+            <a href="#portfolio" class="group inline-flex items-center gap-3 rounded-full bg-ink px-8 py-4 text-sm font-medium text-paper transition-colors duration-500 hover:bg-accent">
+              See my work
+              <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-y-1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v12m0 0l-5-5m5 5l5-5"/></svg>
+            </a>
+            <a href="#contact" data-magnetic class="rounded-full border border-ink/15 px-8 py-4 text-sm font-medium text-ink transition-colors duration-500 hover:border-ink hover:bg-ink/5">
+              Get in touch
+            </a>
+          </div>
+        </div>
+
+        <!-- stats strip -->
+        <div class="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 lg:grid-cols-4" data-reveal style="transition-delay:.65s">
+          <div class="bg-paper p-6 md:p-8">
+            <p class="font-display text-4xl md:text-5xl"><span data-count="2">0</span><span class="text-accent">+</span></p>
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">Years analyzing data</p>
+          </div>
+          <div class="bg-paper p-6 md:p-8">
+            <p class="font-display text-4xl md:text-5xl"><span data-count="10">0</span><span class="text-accent">+</span></p>
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">Tools &amp; frameworks</p>
+          </div>
+          <div class="bg-paper p-6 md:p-8">
+            <p class="font-display text-4xl md:text-5xl"><span data-count="3">0</span></p>
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">Active public profiles</p>
+          </div>
+          <div class="bg-paper p-6 md:p-8">
+            <p class="font-display text-4xl md:text-5xl"><span data-count="100">0</span><span class="text-accent">%</span></p>
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">Remote collaboration ready</p>
+          </div>
+        </div>
+
+        <!-- sparkline card -->
+        <div class="absolute right-10 top-1/2 hidden w-[26rem] -translate-y-1/2 flex-col rounded-2xl border border-ink/10 bg-white/70 p-7 backdrop-blur-sm xl:flex" data-reveal style="transition-delay:.75s">
+          <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40">
+            <span>signal — viz</span>
+            <span>2024 → 2026</span>
+          </div>
+          <svg class="mt-6 w-full" viewBox="0 0 420 140" fill="none" aria-hidden="true">
+            <g stroke="#131316" stroke-opacity=".05" stroke-dasharray="3 7">
+              <line x1="0" y1="35" x2="420" y2="35"/>
+              <line x1="0" y1="70" x2="420" y2="70"/>
+              <line x1="0" y1="105" x2="420" y2="105"/>
+            </g>
+            <path class="spark-bg" d="M0 118 C 40 112, 60 96, 90 98 S 150 70, 180 74 S 230 44, 265 50 S 330 22, 370 18 L 420 8" stroke="#131316" stroke-opacity=".1" stroke-width="2" stroke-linecap="round"/>
+            <path class="spark-accent" pathLength="1" d="M0 118 C 40 112, 60 96, 90 98 S 150 70, 180 74 S 230 44, 265 50 S 330 22, 370 18 L 420 8" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+            <circle class="spark-dot" cx="420" cy="8" r="5" fill="#10B981"/>
+          </svg>
+          <div class="mt-5 flex items-end justify-between">
+            <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40">
+              <span class="mb-1 block text-[9px]">metrics</span>
+              acc · prec · rec · F1
+            </div>
+            <div class="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">insights ↑</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- scroll hint -->
+      <div class="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex" aria-hidden="true">
+        <span class="font-mono text-[9px] uppercase tracking-[0.3em] text-ink/30">scroll</span>
+        <span class="scroll-line block h-9 w-px bg-ink/15"><span></span></span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="border-y border-ink/10 bg-white py-5" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Python <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Pandas <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">NumPy <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">SQL <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Scikit-learn <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Matplotlib <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Seaborn <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Model evaluation <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Data storytelling <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Kaggle <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Remote collaboration <span class="text-accent">◆</span></span>
+          </div>
+          <div class="marquee-group">
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Python <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Pandas <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">NumPy <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">SQL <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Scikit-learn <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Matplotlib <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Seaborn <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Model evaluation <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Data storytelling <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Kaggle <span class="text-accent">◆</span></span>
+            <span class="flex items-center gap-3 whitespace-nowrap font-mono text-xs uppercase tracking-[0.2em] text-ink/60">Remote collaboration <span class="text-accent">◆</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="relative scroll-mt-28 py-28 md:py-36">
+      <span class="ghost-num absolute right-4 top-10 hidden font-display text-[9rem] leading-none lg:block" aria-hidden="true">01</span>
+      <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+        <p class="eyebrow" data-reveal><span class="text-accent">01</span> — About</p>
+        <div class="mt-10 grid gap-14 lg:grid-cols-[1.1fr_.9fr] lg:gap-20">
+          <div>
+            <h2 class="font-display text-4xl leading-[1.05] tracking-[-0.02em] md:text-6xl" data-reveal style="transition-delay:.06s">
+              Detail-driven,<br><em class="italic text-accent">analytically minded</em>,<br>and endlessly curious.
+            </h2>
+            <p class="mt-9 max-w-xl leading-relaxed text-ink/60" data-reveal style="transition-delay:.14s">
+              Data professional with hands-on experience in Python-based analysis, machine learning fundamentals, and model evaluation. I explore datasets, build and assess ML models with Scikit-learn, and communicate findings through clear visualizations and reports.
+            </p>
+            <p class="mt-4 max-w-xl leading-relaxed text-ink/60" data-reveal style="transition-delay:.22s">
+              Comfortable working independently in remote, cross-functional environments and quick to learn new evaluation frameworks and tools. I bring a structured, reproducible approach to AI model evaluation and data analyst roles.
+            </p>
+          </div>
+
+          <div class="space-y-4" data-reveal style="transition-delay:.3s">
+            <div class="relative">
+              <span class="absolute -bottom-3 -right-3 hidden h-full w-full rounded-2xl border border-accent/30 bg-accent/5 sm:block" aria-hidden="true"></span>
+              <div class="card-lift group relative overflow-hidden rounded-2xl border border-ink/10 bg-white">
+              <img src="assets/profile.jpg" alt="Portrait of Muhammad Ali" class="aspect-[4/5] w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.04]" loading="lazy" width="819" height="1024">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent p-6 pt-16">
+                <p class="font-display text-lg italic text-paper">Muhammad Ali</p>
+                <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-accent">Data Analyst &middot; Lahore, PK</p>
+              </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-ink/10 bg-white p-8">
+              <dl class="space-y-5 font-mono text-sm">
+                <div class="flex items-baseline justify-between gap-8">
+                  <dt class="text-[10px] uppercase tracking-[0.2em] text-ink/40">Based in</dt>
+                  <dd class="text-right">Lahore, Punjab, PK</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-8">
+                  <dt class="text-[10px] uppercase tracking-[0.2em] text-ink/40">Email</dt>
+                  <dd class="break-all text-right text-ink/80">alimuhammadmaqbool83@gmail.com</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-8">
+                  <dt class="text-[10px] uppercase tracking-[0.2em] text-ink/40">Focus</dt>
+                  <dd class="text-right">AI evaluation · Data analysis</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-8">
+                  <dt class="text-[10px] uppercase tracking-[0.2em] text-ink/40">Open to</dt>
+                  <dd class="text-right">Remote · Contract · Internship</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-8">
+                  <dt class="text-[10px] uppercase tracking-[0.2em] text-ink/40">Timezone</dt>
+                  <dd class="text-right">Any — async friendly</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- animated bars -->
+            <div id="about-chart" class="rounded-2xl border border-ink/10 bg-ink p-7 text-paper">
+              <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-paper/40">
+                <span>patterns</span>
+                <span>actionable</span>
+              </div>
+              <div class="mt-6 flex h-24 items-end gap-1.5 md:h-28">
+                <span class="bar block h-[42%] w-full rounded-t-sm bg-paper/15" style="transition-delay:.05s"></span>
+                <span class="bar block h-[62%] w-full rounded-t-sm bg-paper/15" style="transition-delay:.12s"></span>
+                <span class="bar block h-[38%] w-full rounded-t-sm bg-paper/15" style="transition-delay:.19s"></span>
+                <span class="bar block h-[78%] w-full rounded-t-sm bg-paper/15" style="transition-delay:.26s"></span>
+                <span class="bar block h-[55%] w-full rounded-t-sm bg-paper/15" style="transition-delay:.33s"></span>
+                <span class="bar block h-[88%] w-full rounded-t-sm bg-accent" style="transition-delay:.4s"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="relative scroll-mt-28 border-y border-ink/5 bg-white py-28 md:py-36">
+      <span class="ghost-num absolute right-4 top-10 hidden font-display text-[9rem] leading-none lg:block" aria-hidden="true">02</span>
+      <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+        <p class="eyebrow" data-reveal><span class="text-accent">02</span> — Experience</p>
+        <div class="mt-10 flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display text-4xl leading-[1.05] tracking-[-0.02em] md:text-6xl" data-reveal style="transition-delay:.06s">
+            Where I've been<br>applying the craft.
+          </h2>
+          <p class="max-w-sm font-mono text-xs leading-relaxed text-ink/40" data-reveal style="transition-delay:.14s">
+            One focused role, three core disciplines: extraction, modeling, and communication.
+          </p>
+        </div>
+
+        <div id="timeline" class="relative mt-16 space-y-8" data-reveal style="transition-delay:.1s">
+          <span class="absolute bottom-0 left-3 top-0 w-px bg-ink/10 md:left-4" aria-hidden="true"></span>
+          <span class="timeline-line absolute bottom-0 left-3 top-0 w-px bg-accent md:left-4" aria-hidden="true"></span>
+
+          <article class="relative grid grid-cols-[1.5rem_1fr] gap-x-4 md:grid-cols-[2rem_1fr] md:gap-x-8">
+            <span class="z-10 mt-12 h-3.5 w-3.5 rounded-full border-2 border-accent bg-paper" aria-hidden="true"></span>
+            <div class="card-lift rounded-2xl border border-ink/10 bg-paper p-8 hover:border-accent/30 md:p-10">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="rounded-full bg-accent/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">Sep 2024 — May 2026</span>
+                <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/50">Remote — United States</span>
+              </div>
+              <h3 class="mt-6 font-display text-2xl tracking-tight md:text-3xl">Data Analyst</h3>
+              <p class="mt-1.5 font-mono text-sm text-ink/50">Boston Institute of Analytics</p>
+              <ul class="mt-7 space-y-3.5 text-[15px] leading-relaxed text-ink/60">
+                <li class="flex gap-3.5"><span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent"></span>Analyzed real-world and Kaggle datasets with Python (Pandas, NumPy) to surface trends, patterns, and actionable insights.</li>
+                <li class="flex gap-3.5"><span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent"></span>Built and evaluated introductory ML models with Scikit-learn using accuracy, precision, recall, and F1 metrics.</li>
+                <li class="flex gap-3.5"><span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent"></span>Crafted clear, structured visualizations with Matplotlib and Seaborn for both technical and non-technical audiences.</li>
+                <li class="flex gap-3.5"><span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent"></span>Applied SQL for extraction and manipulation, supporting reproducible, well-documented analysis workflows.</li>
+                <li class="flex gap-3.5"><span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-accent"></span>Practiced business research and R&amp;D methods to translate raw data into practical, business-relevant recommendations.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="relative scroll-mt-28 py-28 md:py-36">
+      <span class="ghost-num absolute right-4 top-10 hidden font-display text-[9rem] leading-none lg:block" aria-hidden="true">03</span>
+      <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+        <p class="eyebrow" data-reveal><span class="text-accent">03</span> — Core Skills</p>
+        <div class="mt-10 flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display text-4xl leading-[1.05] tracking-[-0.02em] md:text-6xl" data-reveal style="transition-delay:.06s">
+            A focused toolkit for<br>end-to-end analysis.
+          </h2>
+          <p class="max-w-sm font-mono text-xs leading-relaxed text-ink/40" data-reveal style="transition-delay:.14s">
+            Always evaluating new frameworks, tools, and evaluation techniques.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card-lift group rounded-2xl border border-ink/10 bg-white p-8 hover:border-accent/40" data-reveal style="transition-delay:.05s">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">01</span>
+              <span class="h-2 w-2 rounded-full bg-ink/10 transition-colors duration-500 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="mt-9 font-display text-xl tracking-tight">Programming &amp; Analysis</h3>
+            <p class="mt-2 font-mono text-xs text-ink/50">Python · Pandas · NumPy · SQL</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/60">Cleaning, wrangling, and interrogating real-world datasets with reproducible, documented workflows.</p>
+          </div>
+
+          <div class="card-lift group rounded-2xl border border-ink/10 bg-white p-8 hover:border-accent/40" data-reveal style="transition-delay:.12s">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">02</span>
+              <span class="h-2 w-2 rounded-full bg-ink/10 transition-colors duration-500 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="mt-9 font-display text-xl tracking-tight">Machine Learning</h3>
+            <p class="mt-2 font-mono text-xs text-ink/50">Scikit-learn · Model building · Evaluation</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/60">Building and scoring models with accuracy, precision, recall, and F1 — plus benchmarking fundamentals.</p>
+          </div>
+
+          <div class="card-lift group rounded-2xl border border-ink/10 bg-white p-8 hover:border-accent/40" data-reveal style="transition-delay:.19s">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">03</span>
+              <span class="h-2 w-2 rounded-full bg-ink/10 transition-colors duration-500 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="mt-9 font-display text-xl tracking-tight">Data Visualization</h3>
+            <p class="mt-2 font-mono text-xs text-ink/50">Matplotlib · Seaborn</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/60">Clear, structured visuals that speak to both technical and non-technical audiences.</p>
+          </div>
+
+          <div class="card-lift group rounded-2xl border border-ink/10 bg-white p-8 hover:border-accent/40" data-reveal style="transition-delay:.26s">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">04</span>
+              <span class="h-2 w-2 rounded-full bg-ink/10 transition-colors duration-500 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="mt-9 font-display text-xl tracking-tight">SQL &amp; Data Extraction</h3>
+            <p class="mt-2 font-mono text-xs text-ink/50">Querying · Manipulation · Documentation</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/60">Extracting and manipulating data to support repeatable, well-documented analyses.</p>
+          </div>
+
+          <div class="card-lift group rounded-2xl border border-ink/10 bg-white p-8 hover:border-accent/40" data-reveal style="transition-delay:.33s">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">05</span>
+              <span class="h-2 w-2 rounded-full bg-ink/10 transition-colors duration-500 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="mt-9 font-display text-xl tracking-tight">Research &amp; Business</h3>
+            <p class="mt-2 font-mono text-xs text-ink/50">Business research · R&amp;D · Analysis</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/60">Translating raw data into practical, business-relevant recommendations.</p>
+          </div>
+
+          <div class="card-lift group rounded-2xl border border-ink/10 bg-white p-8 hover:border-accent/40" data-reveal style="transition-delay:.4s">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">06</span>
+              <span class="h-2 w-2 rounded-full bg-ink/10 transition-colors duration-500 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="mt-9 font-display text-xl tracking-tight">Communication &amp; Remote</h3>
+            <p class="mt-2 font-mono text-xs text-ink/50">Technical writing · Async collaboration · Kaggle</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/60">Clear communication and remote, cross-functional collaboration across time zones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio" class="relative scroll-mt-28 border-y border-ink/5 bg-white py-28 md:py-36">
+      <span class="ghost-num absolute right-4 top-10 hidden font-display text-[9rem] leading-none lg:block" aria-hidden="true">04</span>
+      <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+        <p class="eyebrow" data-reveal><span class="text-accent">04</span> — Portfolio</p>
+        <div class="mt-10 flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display text-4xl leading-[1.05] tracking-[-0.02em] md:text-6xl" data-reveal style="transition-delay:.06s">
+            Learning in<br>the open.
+          </h2>
+          <p class="max-w-sm font-mono text-xs leading-relaxed text-ink/40" data-reveal style="transition-delay:.14s">
+            Documented projects, competitions, and write-ups across three platforms.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-5 md:grid-cols-3">
+          <a href="https://github.com/MUHAMMADALI83" target="_blank" rel="noopener noreferrer" class="card-lift group flex flex-col rounded-2xl border border-ink/10 bg-paper p-8 hover:border-accent/40" data-reveal style="transition-delay:.05s">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">01</span>
+              <span class="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 transition-all duration-500 group-hover:rotate-45 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
+                <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+              </span>
+            </div>
+            <h3 class="mt-10 font-display text-2xl tracking-tight">GitHub Portfolio</h3>
+            <p class="mt-2 font-mono text-xs text-ink/40">github.com/MUHAMMADALI83</p>
+            <p class="mt-4 flex-1 text-sm leading-relaxed text-ink/60">An active portfolio of data analysis and machine learning projects — code, notebooks, and write-ups.</p>
+            <div class="mt-7 flex flex-wrap gap-2">
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Python</span>
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">ML</span>
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">EDA</span>
+            </div>
+          </a>
+
+          <a href="https://kaggle.com/alimuhammad83" target="_blank" rel="noopener noreferrer" class="card-lift group flex flex-col rounded-2xl border border-ink/10 bg-paper p-8 hover:border-accent/40" data-reveal style="transition-delay:.14s">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">02</span>
+              <span class="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 transition-all duration-500 group-hover:rotate-45 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
+                <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+              </span>
+            </div>
+            <h3 class="mt-10 font-display text-2xl tracking-tight">Kaggle Exploration</h3>
+            <p class="mt-2 font-mono text-xs text-ink/40">kaggle.com/alimuhammad83</p>
+            <p class="mt-4 flex-1 text-sm leading-relaxed text-ink/60">Real-world datasets and competitions, applying and stress-testing model evaluation techniques.</p>
+            <div class="mt-7 flex flex-wrap gap-2">
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Competitions</span>
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Metrics</span>
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Benchmarking</span>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/muhammadali-748114368" target="_blank" rel="noopener noreferrer" class="card-lift group flex flex-col rounded-2xl border border-ink/10 bg-paper p-8 hover:border-accent/40" data-reveal style="transition-delay:.23s">
+            <div class="flex items-start justify-between">
+              <span class="font-mono text-xs text-ink/30 transition-colors duration-500 group-hover:text-accent">03</span>
+              <span class="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 transition-all duration-500 group-hover:rotate-45 group-hover:border-accent group-hover:bg-accent group-hover:text-white">
+                <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+              </span>
+            </div>
+            <h3 class="mt-10 font-display text-2xl tracking-tight">LinkedIn Learning Log</h3>
+            <p class="mt-2 font-mono text-xs text-ink/40">linkedin.com/in/muhammadali-748114368</p>
+            <p class="mt-4 flex-1 text-sm leading-relaxed text-ink/60">Documented progress and project write-ups reflecting a structured, growth-oriented approach to skill-building.</p>
+            <div class="mt-7 flex flex-wrap gap-2">
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Write-ups</span>
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Community</span>
+              <span class="rounded-full border border-ink/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ink/50">Growth</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="relative scroll-mt-28 py-28 md:py-36">
+      <span class="ghost-num absolute right-4 top-10 hidden font-display text-[9rem] leading-none lg:block" aria-hidden="true">05</span>
+      <div class="relative mx-auto max-w-6xl px-6 md:px-10">
+        <p class="eyebrow" data-reveal><span class="text-accent">05</span> — Education</p>
+        <div class="mt-10 flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display text-4xl leading-[1.05] tracking-[-0.02em] md:text-6xl" data-reveal style="transition-delay:.06s">
+            The foundation<br>under the data.
+          </h2>
+          <p class="max-w-sm font-mono text-xs leading-relaxed text-ink/40" data-reveal style="transition-delay:.14s">
+            From computer science fundamentals to a specialist data science path.
+          </p>
+        </div>
+
+        <div class="mt-16 divide-y divide-ink/10 border-y border-ink/10" data-reveal style="transition-delay:.2s">
+          <div class="grid gap-3 py-9 md:grid-cols-[11rem_1fr_auto] md:items-baseline md:gap-8">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-ink/40">Aug 2025 — Oct 2029</p>
+            <div>
+              <h3 class="font-display text-2xl tracking-tight">BS, Data Science</h3>
+              <p class="mt-1.5 font-mono text-xs text-ink/50">Pursuing a data-science specialization — in progress, expected graduation Oct 2029.</p>
+            </div>
+            <span class="w-fit rounded-full border border-accent/30 bg-accent/5 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">In Progress</span>
+          </div>
+
+          <div class="grid gap-3 py-9 md:grid-cols-[11rem_1fr_auto] md:items-baseline md:gap-8">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-ink/40">Jun 2025 — Nov 2025</p>
+            <div>
+              <h3 class="font-display text-2xl tracking-tight">Certification, Data Science with AI</h3>
+              <p class="mt-1.5 font-mono text-xs text-ink/50">Focused certification bridging core data science with applied AI.</p>
+            </div>
+            <span class="w-fit rounded-full border border-ink/10 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40">Completed</span>
+          </div>
+
+          <div class="grid gap-3 py-9 md:grid-cols-[11rem_1fr_auto] md:items-baseline md:gap-8">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-ink/40">Jan 2020 — Sep 2024</p>
+            <div>
+              <h3 class="font-display text-2xl tracking-tight">High School Diploma, Computer Science</h3>
+              <p class="mt-1.5 font-mono text-xs text-ink/50">First formal step into programming and computational thinking.</p>
+            </div>
+            <span class="w-fit rounded-full border border-ink/10 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40">Completed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="relative scroll-mt-28 overflow-hidden bg-ink py-32 text-paper md:py-44">
+      <span class="ghost-num ghost-num-light absolute right-0 top-8 hidden font-display text-[13rem] leading-none lg:block" aria-hidden="true">06</span>
+      <div class="relative mx-auto max-w-6xl px-6 text-center md:px-10">
+        <p class="eyebrow !text-paper/40" data-reveal><span class="text-accent">06</span> — Contact</p>
+        <h2 class="mx-auto mt-10 max-w-3xl font-display text-4xl leading-[1.05] tracking-[-0.02em] md:text-7xl" data-reveal style="transition-delay:.08s">
+          Have a dataset that needs <em class="italic text-accent">decoding?</em>
+        </h2>
+        <p class="mx-auto mt-8 max-w-xl leading-relaxed text-paper/55" data-reveal style="transition-delay:.16s">
+          Open to remote contract, internship, and entry-level opportunities in AI evaluation, data analysis, and data science — across time zones.
+        </p>
+
+        <div class="mt-12 flex flex-col items-center gap-5" data-reveal style="transition-delay:.24s">
+          <a href="mailto:alimuhammadmaqbool83@gmail.com" data-magnetic class="group inline-flex items-center gap-4 rounded-full bg-accent px-9 py-5 text-sm font-medium text-ink transition-colors duration-500 hover:bg-paper">
+            alimuhammadmaqbool83@gmail.com
+            <svg class="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+          </a>
+          <p class="flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/40">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+            </span>
+            Currently available — remote friendly
+          </p>
+        </div>
+
+        <div class="mt-16 flex flex-wrap items-center justify-center gap-4" data-reveal style="transition-delay:.3s">
+          <a href="https://github.com/MUHAMMADALI83" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2.5 rounded-full border border-paper/15 px-6 py-3 font-mono text-xs uppercase tracking-[0.18em] text-paper/70 transition-colors duration-500 hover:border-accent hover:text-accent">
+            GitHub
+            <svg class="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+          </a>
+          <a href="https://kaggle.com/alimuhammad83" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2.5 rounded-full border border-paper/15 px-6 py-3 font-mono text-xs uppercase tracking-[0.18em] text-paper/70 transition-colors duration-500 hover:border-accent hover:text-accent">
+            Kaggle
+            <svg class="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/muhammadali-748114368" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2.5 rounded-full border border-paper/15 px-6 py-3 font-mono text-xs uppercase tracking-[0.18em] text-paper/70 transition-colors duration-500 hover:border-accent hover:text-accent">
+            LinkedIn
+            <svg class="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4m0 0H6m6 0v6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-paper/10 bg-ink pb-10 pt-8 text-paper">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-6 font-mono text-[11px] uppercase tracking-[0.18em] text-paper/40 md:flex-row md:px-10">
+        <p>© 2026 Muhammad Ali</p>
+        <p class="text-center">Designed with restraint · Built with intent</p>
+        <a href="#top" class="transition-colors duration-300 hover:text-accent">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============ BACK TO TOP FLOAT ============ -->
+  <a href="#top" id="to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-ink/10 bg-white/85 shadow-lg shadow-ink/5 backdrop-blur">
+    <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 14V2m0 0L3 7m5-5l5 5"/></svg>
+  </a>
+
+<script>
+(function () {
+  'use strict';
+  const $  = (s, c) => (c || document).querySelector(s);
+  const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- preloader ---------- */
+  const loader = $('#loader');
+  const reveal = () => {
+    document.body.classList.add('is-loaded');
+    loader.classList.add('loader-done');
+    setTimeout(() => { if (loader) loader.remove(); }, 1100);
+  };
+  if (document.readyState === 'complete') setTimeout(reveal, 500);
+  else { window.addEventListener('load', reveal); setTimeout(reveal, 2400); }
+
+  /* ---------- Lahore clock ---------- */
+  const clock = $('#clock');
+  const tick = () => {
+    try {
+      clock.textContent = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Karachi', hour: '2-digit', minute: '2-digit', second: '2-digit'
+      }).format(new Date());
+    } catch (e) { clock.textContent = 'PKT'; }
+  };
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- nav + progress + to-top ---------- */
+  const nav = $('#nav'), progress = $('#progress'), toTop = $('#to-top');
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('nav-scrolled', y > 24);
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+    toTop.classList.toggle('show', y > 700);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- typewriter ---------- */
+  const roles = ['Data Analyst', 'ML Practitioner', 'Python × SQL × Pandas', 'Data Storyteller', 'Scikit-learn Explorer'];
+  const target = $('#type-target');
+  if (target && !reduce) {
+    let ri = 0, ci = 0, deleting = false;
+    const step = () => {
+      const word = roles[ri];
+      if (!deleting) {
+        ci++;
+        target.textContent = word.slice(0, ci);
+        if (ci === word.length) { deleting = true; setTimeout(step, 1500); return; }
+        setTimeout(step, 65 + Math.random() * 45);
+      } else {
+        ci--;
+        target.textContent = word.slice(0, ci);
+        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(step, 320); return; }
+        setTimeout(step, 32);
+      }
+    };
+    setTimeout(step, 1300);
+  } else if (target) {
+    target.textContent = roles[0];
+  }
+
+  /* ---------- scroll reveal ---------- */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+  $$('[data-reveal]').forEach((el) => io.observe(el));
+
+  /* ---------- timeline draw ---------- */
+  const tl = $('#timeline');
+  if (tl) {
+    const tio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { tl.classList.add('is-visible'); tio.unobserve(tl); } });
+    }, { threshold: 0.15 });
+    tio.observe(tl);
+  }
+
+  /* ---------- about bars ---------- */
+  const chart = $('#about-chart');
+  if (chart) {
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { chart.classList.add('in'); cio.unobserve(chart); } });
+    }, { threshold: 0.35 });
+    cio.observe(chart);
+  }
+
+  /* ---------- count-up ---------- */
+  const animateCount = (el) => {
+    const targetN = parseFloat(el.dataset.count);
+    if (reduce) { el.textContent = String(targetN); return; }
+    const dur = 1700;
+    const start = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 4);
+    const frame = (now) => {
+      const p = Math.min((now - start) / dur, 1);
+      el.textContent = String(Math.round(targetN * ease(p)));
+      if (p < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+  const co = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) { animateCount(en.target); co.unobserve(en.target); }
+    });
+  }, { threshold: 0.5 });
+  $$('[data-count]').forEach((el) => co.observe(el));
+
+  /* ---------- active nav link ---------- */
+  const sections = ['about', 'experience', 'skills', 'portfolio', 'education', 'contact'].reduce((acc, id) => {
+    const el = document.getElementById(id);
+    const link = $(`.nav-link[href="#${id}"]`);
+    if (el && link) acc.push({ el, link });
+    return acc;
+  }, []);
+  const sio = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) {
+        sections.forEach((s) => s.link.classList.remove('active'));
+        const hit = sections.find((s) => s.el.id === en.target.id);
+        if (hit) hit.link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.35, rootMargin: '-20% 0px -55% 0px' });
+  sections.forEach((s) => sio.observe(s.el));
+
+  /* ---------- custom cursor ---------- */
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    document.body.classList.add('has-cursor');
+    const dot = $('#cursor-dot'), ring = $('#cursor-ring');
+    let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
+    window.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+    }, { passive: true });
+    const loop = () => {
+      rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+      ring.style.setProperty('--x', rx + 'px');
+      ring.style.setProperty('--y', ry + 'px');
+      requestAnimationFrame(loop);
+    };
+    loop();
+    $$('a, button, [data-hover]').forEach((el) => {
+      el.addEventListener('mouseenter', () => ring.classList.add('cursor-grow'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('cursor-grow'));
+    });
+  }
+
+  /* ---------- magnetic elements ---------- */
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce) {
+    $$('[data-magnetic]').forEach((el) => {
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.22;
+        const y = (e.clientY - r.top - r.height / 2) * 0.22;
+        el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  /* ---------- mobile menu ---------- */
+  const burger = $('#burger'), menu = $('#mobile-menu');
+  const closeMenu = () => {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+  burger.addEventListener('click', () => {
+    const open = menu.classList.contains('open');
+    if (open) closeMenu();
+    else {
+      menu.classList.add('open');
+      burger.classList.add('open');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+  $$('#mobile-menu a').forEach((a) => a.addEventListener('click', closeMenu));
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 768) closeMenu(); });
+})();
+</script>
+</body>
+</html>
