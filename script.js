@@ -1,4 +1,28 @@
 (() => {
+  // Repair the portfolio shell width token and keep content readable if scripts are unavailable.
+  const enhancementStyles = document.createElement('style');
+  enhancementStyles.textContent = `
+    :root { --shell: min(1180px, calc(100% - 96px)); }
+    @media (max-width: 900px) { :root { --shell: min(calc(100% - 56px), 720px); } }
+    @media (max-width: 640px) { :root { --shell: calc(100% - 38px); } }
+    @media (max-width: 360px) { :root { --shell: calc(100% - 30px); } }
+    .reveal { opacity: 1; transform: none; }
+    html.js-enabled .reveal { opacity: 0; transform: translateY(20px); }
+    html.js-enabled .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 640px) {
+      html.js-enabled .reveal { transform: translateY(13px); }
+      html.js-enabled .reveal.is-visible { transform: translateY(0); }
+      html:not(.js-enabled) .primary-nav { position: static; visibility: visible; opacity: 1; transform: none; flex-direction: column; align-items: stretch; padding: 8px 0 16px; }
+      html:not(.js-enabled) .primary-nav > a:not(.nav-cta) { padding: 10px 0; }
+      html:not(.js-enabled) .menu-toggle { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html.js-enabled .reveal, html.js-enabled .reveal.is-visible { opacity: 1; transform: none; }
+    }
+  `;
+  document.head.append(enhancementStyles);
+  document.documentElement.classList.add('js-enabled');
+
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const menuButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.primary-nav');
