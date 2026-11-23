@@ -1,45 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0d0c">
-  <meta name="description" content="Muhammad Ali — Business Operations and Analytics Manager in Lahore, Pakistan.">
-  <title>Muhammad Ali — Business Operations & Analytics</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#0b0d0c;--paper:#efefe9;--acid:#c9ff5a;--lime:#a7cf47;--panel:#161916;--line:#30352f;--muted:#9da49e;--white:#f7f8f4;--sans:Manrope,sans-serif;--display:Syne,sans-serif;--mono:"DM Mono",monospace}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--white);font-family:var(--sans);line-height:1.55}a{color:inherit}.shell{width:min(1280px,calc(100% - 64px));margin:auto}.eyebrow{font:500 10px var(--mono);letter-spacing:.16em;text-transform:uppercase}
-    header{height:82px;border-bottom:1px solid var(--line);position:absolute;inset:0 0 auto;z-index:10}.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.wordmark{font:700 18px var(--display);text-decoration:none}.wordmark span{color:var(--acid)}.nav a{text-decoration:none}.nav-links{display:flex;gap:32px}.nav-links a{font:500 11px var(--mono);text-transform:uppercase;color:#bbc1bc}.nav-links a:hover{color:var(--acid)}
-    .hero{min-height:760px;display:flex;align-items:flex-end;padding:150px 0 72px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:720px;height:720px;right:-180px;top:-240px;border:1px solid #252b25;border-radius:50%;box-shadow:0 0 0 70px #111411,0 0 0 71px #252b25,0 0 0 150px #0d100e,0 0 0 151px #1d221d}.hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) 300px;gap:64px;align-items:end}.hero-status{display:flex;align-items:center;gap:10px;color:var(--acid)}.hero-status i{width:8px;height:8px;background:var(--acid);border-radius:50%;box-shadow:0 0 18px var(--acid)}h1{margin:24px 0 26px;font:700 clamp(68px,9vw,130px)/.82 var(--display);letter-spacing:-.075em;text-transform:uppercase}.outline{-webkit-text-stroke:1.5px var(--white);color:transparent}.hero-copy{max-width:670px;color:#b3bab4;font-size:18px}.hero-actions{display:flex;gap:8px;margin-top:34px}.btn{height:50px;padding:0 18px;border:1px solid #3a4039;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font:500 11px var(--mono);text-transform:uppercase}.btn-primary{background:var(--acid);border-color:var(--acid);color:var(--ink)}.btn-secondary:hover{border-color:var(--acid);color:var(--acid)}
-    .portrait-wrap{position:relative}.portrait-wrap:before{content:"";position:absolute;inset:-12px 12px 12px -12px;border:1px solid #424940}.portrait-wrap img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 20%;position:relative;filter:grayscale(1) contrast(1.08)}.portrait-label{position:absolute;left:-22px;bottom:-14px;background:var(--acid);color:var(--ink);padding:9px 12px;font:500 9px var(--mono);text-transform:uppercase;transform:rotate(-90deg);transform-origin:left bottom}
-    .ticker{height:48px;border-bottom:1px solid var(--line);overflow:hidden}.ticker-track{height:48px;display:flex;align-items:center;width:max-content;animation:slide 24s linear infinite}.ticker-track span{font:500 10px var(--mono);text-transform:uppercase;color:#adb4ae;margin-right:38px}.ticker-track b{color:var(--acid);margin-right:38px}@keyframes slide{to{transform:translateX(-50%)}}
-    section{padding:110px 0;border-bottom:1px solid var(--line)}.section-label{display:flex;justify-content:space-between;color:var(--acid);border-bottom:1px solid var(--line);padding-bottom:16px}.section-label span:last-child{color:#777f79}.section-title{max-width:900px;margin:30px 0 52px;font:700 clamp(48px,7vw,88px)/.95 var(--display);letter-spacing:-.06em;text-transform:uppercase}.section-title em{color:var(--acid);font-style:normal}
-    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.feature-main,.feature-side{background:var(--ink)}.feature-main{padding:42px}.feature-main h3{margin:20px 0 14px;max-width:600px;font:700 38px/1.05 var(--display);letter-spacing:-.04em}.feature-main p{max-width:650px;color:#abb2ac}.data-line{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}.data-line span{border:1px solid var(--line);padding:8px 10px;font:500 9px var(--mono);text-transform:uppercase;color:#bfc6c0}.feature-side{display:grid}.stat{display:grid;grid-template-columns:110px 1fr;align-items:center;padding:28px 34px;border-bottom:1px solid var(--line)}.stat:last-child{border:0}.stat strong{font:700 38px var(--display);color:var(--acid)}.stat span{color:#9da59f;font-size:13px}
-    .experience-grid{display:grid;grid-template-columns:280px 1fr}.year{color:var(--acid);font:500 11px var(--mono);text-transform:uppercase}.role{border-top:1px solid var(--line);padding:34px 0 34px 38px}.role-grid{display:grid;grid-template-columns:230px 1fr}.role h3{margin:0;font:700 22px var(--display)}.role-company{color:var(--acid);font-size:13px;margin:5px 0}.role ul{margin:0;padding-left:18px;color:#abb2ac;font-size:14px}.role li+li{margin-top:8px}
-    .capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.capability{min-height:280px;border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:space-between}.capability-no{color:var(--acid);font:500 10px var(--mono)}.capability h3{font:700 24px var(--display);margin:0}.capability p{color:#abb2ac;font-size:13px}.capability-tags{display:flex;flex-wrap:wrap;gap:6px}.capability-tags span{padding:6px 8px;border:1px solid #343a34;font:500 9px var(--mono);color:#bdc4be}
-    .education-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.edu{border:1px solid var(--line);padding:30px}.edu span{color:var(--acid);font:500 9px var(--mono);text-transform:uppercase}.edu h3{margin:18px 0 4px;font:700 22px var(--display)}.edu p{margin:0;color:#9da59f;font-size:13px}
-    .profiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.profile{height:170px;border:1px solid var(--line);padding:20px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between}.profile:hover{background:var(--acid);color:var(--ink);border-color:var(--acid)}.profile span{font:500 9px var(--mono);text-transform:uppercase}.profile strong{font:700 18px var(--display)}.profile i{align-self:flex-end;font-style:normal}
-    .contact{min-height:500px;display:flex;align-items:center}.contact-inner{width:100%;display:grid;grid-template-columns:1fr 280px;align-items:end}.contact h2{margin:26px 0 0;font:700 clamp(60px,8vw,110px)/.87 var(--display);letter-spacing:-.07em;text-transform:uppercase}.contact h2 span{color:var(--acid)}.contact-side p{color:#abb2ac;margin:0 0 24px}.contact-side .btn{width:100%}
-    footer{height:82px;display:flex;align-items:center;color:#8e968f;font:500 9px var(--mono);text-transform:uppercase}.footer-inner{display:flex;justify-content:space-between}.footer-inner a{text-decoration:none;color:var(--acid)}
-    @media(max-width:900px){.shell{width:min(100% - 40px,760px)}.hero-inner{grid-template-columns:1fr 220px}.feature-grid,.role-grid{grid-template-columns:1fr}.stat{grid-template-columns:90px 1fr}.profiles{grid-template-columns:1fr 1fr}.contact-inner{grid-template-columns:1fr 240px}}
-    @media(max-width:680px){.shell{width:calc(100% - 34px)}header{height:64px}.nav{height:64px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.hero{min-height:auto;padding:120px 0 60px}.hero-inner{grid-template-columns:1fr}.portrait-wrap{display:none}h1{font-size:clamp(58px,17vw,82px)}.hero-copy{font-size:16px}.hero-actions{flex-wrap:wrap}.btn{flex:1;text-align:center}.ticker{display:none}section{padding:72px 0}.section-title{font-size:48px;margin-bottom:34px}.feature-grid,.experience-grid,.capabilities,.education-grid,.profiles,.contact-inner{grid-template-columns:1fr}.feature-main{padding:26px}.feature-main h3{font-size:30px}.role{padding-left:0}.year{padding-bottom:12px}.stat{padding:22px}.capability{min-height:220px}.profiles{grid-template-columns:1fr}.profile{height:130px}.contact{min-height:430px}.contact h2{font-size:58px}.contact-side{margin-top:30px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:6px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Ali | Business Operations & Analytics</title>
+<meta name="description" content="Muhammad Ali, Business Operations & Analytics Manager at Vertex CoWorking, Lahore. Data science, financial analysis and operations automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDF0F3; --card:#FFFFFF; --ink:#13203A; --muted:#55627A;
+  --teal:#1B7F8E; --amber:#F0A22E; --line:#D3DAE3; --soft:#DCE7EC;
+  --head:'Bricolage Grotesque',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:40px}
+nav{position:sticky;top:0;z-index:20;background:rgba(237,240,243,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+av .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+nav b{font:800 20px var(--head)}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+@media(max-width:700px){nav ul{display:none}}
+#top{padding:64px 0 40px;min-height:calc(100vh - 64px)}
+canvas#net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.55}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.tag{display:inline-flex;gap:8px;align-items:center;font-weight:500;font-size:15px;color:var(--teal);margin-bottom:18px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--amber);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(240,162,46,0)}0%{box-shadow:0 0 0 0 rgba(240,162,46,.6)}}
+h1{font-size:clamp(46px,8vw,92px);font-weight:800;margin-bottom:20px}
+h1 span{display:block;overflow:hidden}
+h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+h1 span:nth-child(2) i{animation-delay:.12s;color:var(--teal)}
+@keyframes rise{to{transform:none}}
+.sub{font-size:19px;color:var(--muted);max-width:46ch;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:.2s}
+.btn.p{background:var(--ink);color:#fff}
+.btn.p:hover{background:var(--teal);border-color:var(--teal)}
+.btn.s:hover{background:var(--ink);color:#fff}
+.board{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 24px 50px -28px rgba(19,32,58,.45)}
+.board h3{font-size:16px;font-weight:700;margin-bottom:2px}
+.board small{color:var(--muted);font-size:13px}
+.heat{display:grid;grid-template-columns:repeat(13,1fr);gap:5px;margin:16px 0}
+.heat div{aspect-ratio:1;border-radius:4px;background:var(--soft);transition:background .5s}
+.legend{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.kpis b{display:block;font:800 26px var(--head)}
+.kpis span{font-size:12px;color:var(--muted)}
+.about{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.photo{position:relative;width:100%;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(150deg,var(--teal),var(--ink));display:grid;place-items:center;color:#fff;font:800 72px var(--head)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about p{margin-bottom:16px;max-width:62ch}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px}
+.facts b{display:block;font:800 30px var(--head);color:var(--teal)}
+.facts span{font-size:14px;color:var(--muted)}
+.band{background:var(--ink);color:#fff}
+.band .lead{color:#B8C3D6}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:860px){.flow{grid-template-columns:1fr 1fr}}
+.node{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:20px;position:relative}
+.node h3{font-size:18px;margin-bottom:6px}
+.node p{font-size:14px;color:#B8C3D6}
+.node:not(:last-child)::after{content:"";position:absolute;right:-17px;top:50%;width:16px;height:2px;background:var(--amber)}
+@media(max-width:860px){.node::after{display:none}}
+.metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chip{border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:5px 14px;font-size:14px}
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:8px}
+svg text{font:12px var(--body);fill:var(--muted)}
+.ln{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1200;stroke-dashoffset:1200}
+.ln.on{animation:draw 2.2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.key{display:flex;gap:20px;font-size:14px;margin-bottom:8px;color:var(--muted)}
+.key i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.skills{grid-template-columns:1fr}}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.sk h3{font-size:19px;margin-bottom:14px}
+.bar{margin-bottom:12px}
+.bar div{display:flex;justify-content:space-between;font-size:14px;margin-bottom:4px}
+.bar em{display:block;height:6px;border-radius:3px;background:var(--soft);overflow:hidden}
+.bar em::after{content:"";display:block;height:100%;width:0;background:var(--teal);border-radius:3px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.sk.on .bar em::after{width:var(--w)}
+.tl{border-left:3px solid var(--teal);padding-left:28px;display:grid;gap:30px}
+.tl h3{font-size:21px}
+.tl small{color:var(--teal);font-weight:600;font-size:14px}
+.tl p{color:var(--muted);max-width:64ch;margin-top:4px}
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.proj{grid-template-columns:1fr}}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 18px 36px -22px rgba(19,32,58,.5)}
+.pc svg{display:block;width:100%;height:130px;background:var(--soft)}
+.pc div{padding:18px 20px 22px}
+.pc h3{font-size:19px;margin-bottom:6px}
+.pc p{font-size:15px;color:var(--muted)}
+.pc u{display:block;margin-top:12px;font-weight:600;font-size:14px;color:var(--teal)}
+.contact{text-align:center}
+.contact .btns{justify-content:center;margin-top:24px}
+footer{padding:28px 0;text-align:center;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 span i{transform:none}.ln{stroke-dashoffset:0}.bar em::after{width:var(--w)}}
+</style>
 </head>
 <body>
-  <header><div class="shell nav"><a class="wordmark" href="#top">Muhammad Ali<span>.</span></a><nav class="nav-links"><a href="#profile">Profile</a><a href="#experience">Experience</a><a href="#skills">Expertise</a><a href="#contact">Contact</a></nav></div></header>
-  <main id="top">
-    <section class="hero" style="border-bottom:1px solid var(--line);padding-top:150px"><div class="shell hero-inner"><div><div class="hero-status eyebrow"><i></i>Available · Lahore, Pakistan</div><h1>MUHAMMAD<br><span class="outline">ALI</span></h1><p class="hero-copy">Business Operations &amp; Analytics Manager. I turn operational activity into clear measurement, practical systems, and better decisions.</p><div class="hero-actions"><a class="btn btn-primary" href="#profile">View profile ↓</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/muhammad-ali-748114368" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div><div class="portrait-wrap"><img src="assets/profile.jpg" alt="Muhammad Ali"><span class="portrait-label">Operations × Analytics</span></div></div></section>
-    <div class="ticker"><div class="ticker-track"><span>Business Operations</span><b>●</b><span>Analytics Systems</span><b>●</b><span>Financial Analysis</span><b>●</b><span>Workflow Automation</span><b>●</b><span>Data Science</span><b>●</b><span>Business Operations</span><b>●</b><span>Analytics Systems</span><b>●</b><span>Financial Analysis</span><b>●</b><span>Workflow Automation</span><b>●</b><span>Data Science</span><b>●</b></div></div>
-    <section id="profile"><div class="shell"><div class="section-label eyebrow"><span>01 / Profile</span><span>Selected work</span></div><h2 class="section-title">Building systems<br>that make <em>work visible.</em></h2><div class="feature-grid"><article class="feature-main"><div class="eyebrow" style="color:var(--acid)">Featured engagement · Vertex Coworking</div><h3>A 13-month analytics system for Vertex 2</h3><p>Designed a structured framework connecting operational and financial activity across occupancy, revenue, expenses, memberships, leads, and downtime. Monthly reporting and a live dashboard support pricing, growth, and planning decisions for Vertex 3.</p><div class="data-line"><span>Occupancy</span><span>Revenue</span><span>Expenses</span><span>Memberships</span><span>Leads</span><span>Downtime</span></div></article><aside class="feature-side"><div class="stat"><strong>13</strong><span>Months of planning<br>and performance data</span></div><div class="stat"><strong>06</strong><span>Core operational<br>performance signals</span></div><div class="stat"><strong>01</strong><span>Integrated management<br>dashboard</span></div></aside></div></div></section>
-    <section id="experience"><div class="shell"><div class="section-label eyebrow"><span>02 / Experience</span><span>Current & previous</span></div><h2 class="section-title">Work with<br><em>measurable impact.</em></h2><div class="experience-grid"><div class="year">2025 — Present</div><article class="role"><div class="role-grid"><div><h3>Business Operations &amp;<br>Analytics Manager</h3><div class="role-company">Vertex Coworking · Lahore</div></div><ul><li>Own operational reporting across occupancy, revenue, expenses, memberships, leads, and downtime.</li><li>Translate branch performance into monthly decisions and a clear growth planning foundation.</li><li>Build practical n8n workflows to automate repetitive operational processes.</li></ul></div></article></div><div class="experience-grid"><div class="year">Previous</div><article class="role"><div class="role-grid"><div><h3>Data Analyst</h3><div class="role-company">Boston Institute of Analytics</div></div><ul><li>Applied Python, SQL, visualization, and statistical methods to real-world datasets.</li><li>Developed structured analysis and reporting for data-driven professional projects.</li></ul></div></article></div></div></section>
-    <section id="skills"><div class="shell"><div class="section-label eyebrow"><span>03 / Expertise</span><span>Tools & disciplines</span></div><h2 class="section-title">Technical depth.<br><em>Business context.</em></h2><div class="capabilities"><article class="capability"><span class="capability-no">01 / Data</span><h3>Data Analysis</h3><p>Structured analysis of operational, financial, and commercial information.</p><div class="capability-tags"><span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span></div></article><article class="capability"><span class="capability-no">02 / Decision</span><h3>Analytics &amp; Reporting</h3><p>Clear visual reporting that turns complex performance data into action.</p><div class="capability-tags"><span>Matplotlib</span><span>Seaborn</span><span>Financial Analysis</span></div></article><article class="capability"><span class="capability-no">03 / Systems</span><h3>Operations &amp; Automation</h3><p>Practical workflows that improve control, visibility, and execution.</p><div class="capability-tags"><span>n8n</span><span>Operations</span><span>Business Analytics</span></div></article></div></div></section>
-    <section id="education"><div class="shell"><div class="section-label eyebrow"><span>04 / Education</span><span>Academic foundation</span></div><h2 class="section-title">Built on <em>curiosity.</em></h2><div class="education-grid"><article class="edu"><span>In progress</span><h3>BS in Data Science</h3><p>Virtual University of Pakistan</p></article><article class="edu"><span>Completed</span><h3>Data Science with AI Certification</h3><p>Boston Institute of Analytics</p></article></div></div></section>
-    <section><div class="shell"><div class="section-label eyebrow"><span>05 / Profiles</span><span>Selected access points</span></div><h2 class="section-title">View the <em>work.</em></h2><div class="profiles"><a class="profile" href="https://github.com/MUHAMMADALI83" target="_blank" rel="noopener noreferrer"><span>01 / Code</span><strong>GitHub</strong><i>↗</i></a><a class="profile" href="https://www.kaggle.com/alimuhammad83" target="_blank" rel="noopener noreferrer"><span>02 / Data</span><strong>Kaggle</strong><i>↗</i></a><a class="profile" href="https://www.linkedin.com/in/muhammad-ali-748114368" target="_blank" rel="noopener noreferrer"><span>03 / Network</span><strong>LinkedIn</strong><i>↗</i></a><a class="profile" href="mailto:alimuhammadmaqbool83@gmail.com"><span>04 / Direct</span><strong>Email</strong><i>↗</i></a></div></div></section>
-    <section class="contact" id="contact"><div class="shell contact-inner"><div><div class="eyebrow" style="color:var(--acid)">06 / Contact</div><h2>Let’s create<br><span>clarity.</span></h2></div><div class="contact-side"><p>Open to conversations in analytics, operations, coworking, startups, and practical automation.</p><a class="btn btn-primary" href="mailto:alimuhammadmaqbool83@gmail.com">Start a conversation</a></div></div></section>
-  </main>
-  <footer><div class="shell footer-inner"><span>© 2026 Muhammad Ali · Lahore, Pakistan</span><span><a href="https://github.com/MUHAMMADALI83" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://www.kaggle.com/alimuhammad83" target="_blank" rel="noopener noreferrer">Kaggle</a> / <a href="https://www.linkedin.com/in/muhammad-ali-748114368" target="_blank" rel="noopener noreferrer">LinkedIn</a></span></div></footer>
+<nav><div class="wrap"><b>Muhammad Ali</b><ul><li><a href="#about">About</a></li><li><a href="#system">Vertex 2 system</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<header class="hero" id="top"><canvas id="net" aria-hidden="true"></canvas><div class="wrap"><div><p class="tag"><span class="dot"></span>Open to connect: analytics, operations, startups</p><h1><span><i>Muhammad</i></span><span><i>Ali</i></span></h1><p class="sub">Business Operations &amp; Analytics Manager at Vertex CoWorking, Lahore. I turn daily operations into data, and data into decisions.</p><div class="btns"><a class="btn p" href="#system">See the Vertex 2 system</a><a class="btn s" href="#contact">Get in touch</a></div></div><div class="board" role="img" aria-label="Sample occupancy heatmap for 13 months"><h3>Occupancy by month, 13-month view</h3><small>Illustrative sample data</small><div class="heat" id="heat"></div><div class="legend"><span>Month 1</span><span>Month 13</span></div><div class="kpis"><div><b data-to="86" data-suf="%">0</b><span>Avg. occupancy</span></div><div><b data-to="13">0</b><span>Months tracked</span></div><div><b data-to="6">0</b><span>Metrics rolled up</span></div></div></div></div></header>
+<section id="about"><div class="wrap about"><div class="photo">MA<img src="assets/profile.jpg" alt="Portrait of Muhammad Ali" onerror="this.remove()"></div><div><h2>About me</h2><p>I run business operations and analytics for Vertex CoWorking in Lahore. My background is in data science, and I apply Python, SQL, Matplotlib and Seaborn to financial analysis, business analytics and operations management.</p><p>I am completing a BS in Data Science at Virtual University of Pakistan, and I publish projects on real-world datasets on Kaggle and GitHub. I also automate repetitive operations with n8n workflows.</p><div class="facts"><div><b>13</b><span>month analytics system</span></div><div><b>2</b><span>years as a data analyst</span></div><div><b>BIA</b><span>Data Science with AI</span></div></div></div></div></section>
+<section id="system" class="band"><div class="wrap"><h2>Vertex 2: an analytics system for a new coworking branch</h2><p class="lead">I designed a 13-month system that tracks the branch from day one. It guides pricing, growth and the planning of Vertex 3.</p><div class="flow"><div class="node"><h3>Daily data</h3><p>Occupancy, revenue, expenses, memberships, leads and downtime.</p></div><div class="node"><h3>Monthly roll-ups</h3><p>Each metric summarised into a monthly view for comparison.</p></div><div class="node"><h3>Live dashboard</h3><p>One place to read the branch's current performance.</p></div><div class="node"><h3>Decisions</h3><p>Pricing, growth plans and the Vertex 3 roadmap.</p></div></div><div class="metrics"><span class="chip">Occupancy</span><span class="chip">Revenue</span><span class="chip">Expenses</span><span class="chip">Memberships</span><span class="chip">Leads</span><span class="chip">Downtime</span></div></div></section>
+<section><div class="wrap"><h2>Revenue vs expenses</h2><p class="lead">The view the monthly summary produces. Sample figures shown here; replace them with your own numbers or an exported chart.</p><div class="chartbox"><div class="key"><span><i style="background:var(--teal)"></i>Revenue</span><span><i style="background:var(--amber)"></i>Expenses</span></div><svg id="chart" viewBox="0 0 800 280" width="100%" role="img" aria-label="Line chart: revenue rising above expenses over 13 months"><g stroke="#D3DAE3"><line x1="40" y1="30" x2="780" y2="30"/><line x1="40" y1="100" x2="780" y2="100"/><line x1="40" y1="170" x2="780" y2="170"/><line x1="40" y1="240" x2="780" y2="240"/></g><path class="ln" id="l1" stroke="#1B7F8E" d="M40 225 L97 212 L154 195 L211 180 L268 160 L325 150 L382 128 L439 112 L496 98 L553 84 L610 70 L667 58 L724 48 L780 40"/><path class="ln" id="l2" stroke="#F0A22E" d="M40 190 L97 186 L154 182 L211 180 L268 176 L325 172 L382 170 L439 166 L496 164 L553 160 L610 158 L667 154 L724 152 L780 150"/><text x="40" y="262">M1</text><text x="382" y="262">M7</text><text x="762" y="262">M13</text></svg></div></div></section>
+<section id="skills" style="padding-top:0"><div class="wrap"><h2>Skills</h2><p class="lead">Tools I use to answer business questions with data.</p><div class="skills"><div class="sk"><h3>Analytics</h3><div class="bar" style="--w:90%"><div><span>Python</span></div><em></em></div><div class="bar" style="--w:85%"><div><span>SQL</span></div><em></em></div><div class="bar" style="--w:85%"><div><span>Matplotlib &amp; Seaborn</span></div><em></em></div></div><div class="sk"><h3>Business</h3><div class="bar" style="--w:88%"><div><span>Financial analysis</span></div><em></em></div><div class="bar" style="--w:88%"><div><span>Business analytics</span></div><em></em></div><div class="bar" style="--w:85%"><div><span>Operations management</span></div><em></em></div></div><div class="sk"><h3>Automation</h3><div class="bar" style="--w:75%"><div><span>n8n workflows</span></div><em></em></div><div class="bar" style="--w:80%"><div><span>Dashboards &amp; reporting</span></div><em></em></div><div class="bar" style="--w:75%"><div><span>Machine learning</span></div><em></em></div></div></div></div></section>
+<section id="experience" style="padding-top:0"><div class="wrap"><h2>Experience &amp; education</h2><p class="lead" style="margin-bottom:32px"></p><div class="tl"><div><small>Oct 2026 to present</small><h3>Business Operations &amp; Analytics Manager, Vertex CoWorking</h3><p>Lahore. Built the Vertex 2 analytics system and am automating repetitive operations with n8n.</p></div><div><small>Oct 2026 to Oct 2030</small><h3>BS Data Science, Virtual University of Pakistan</h3><p>Undergraduate degree in progress.</p></div><div><small>Sep 2024 to May 2026</small><h3>Data Analyst, Boston Institute of Analytics</h3><p>Analyst role alongside my certification.</p></div><div><small>Jun 2025 to Nov 2025</small><h3>Certification in Data Science with AI, Boston Institute of Analytics</h3><p>Python, statistics, machine learning and applied projects.</p></div></div></div></section>
+<section id="projects" style="padding-top:0"><div class="wrap"><h2>Projects</h2><p class="lead">Edit the titles and links below to match your Kaggle and GitHub work.</p><div class="proj"><a class="pc" href="https://github.com/MUHAMMADALI83"><svg viewBox="0 0 300 130" aria-hidden="true"><g fill="#1B7F8E"><rect x="30" y="70" width="28" height="40"/><rect x="75" y="50" width="28" height="60"/><rect x="120" y="60" width="28" height="50"/><rect x="165" y="30" width="28" height="80"/><rect x="210" y="20" width="28" height="90" fill="#F0A22E"/></g></svg><div><h3>Project title one</h3><p>One sentence on the dataset, the question and the result.</p><u>View on GitHub</u></div></a><a class="pc" href="https://www.kaggle.com/alimuhammad83"><svg viewBox="0 0 300 130" aria-hidden="true"><polyline points="20,100 70,80 120,90 170,50 220,60 280,20" fill="none" stroke="#1B7F8E" stroke-width="4"/><circle cx="280" cy="20" r="6" fill="#F0A22E"/></svg><div><h3>Project title two</h3><p>One sentence on the dataset, the question and the result.</p><u>View on Kaggle</u></div></a><a class="pc" href="https://github.com/MUHAMMADALI83"><svg viewBox="0 0 300 130" aria-hidden="true"><circle cx="150" cy="65" r="45" fill="none" stroke="#D3DAE3" stroke-width="18"/><circle cx="150" cy="65" r="45" fill="none" stroke="#1B7F8E" stroke-width="18" stroke-dasharray="190 283" transform="rotate(-90 150 65)"/></svg><div><h3>Project title three</h3><p>One sentence on the dataset, the question and the result.</p><u>View on GitHub</u></div></a></div></div></section>
+<section id="contact" class="contact" style="padding-top:0"><div class="wrap"><h2>Let's connect</h2><p class="lead" style="margin:0 auto">I'm happy to talk with people in analytics, operations and the coworking and startup space.</p><div class="btns"><a class="btn p" href="mailto:alimuhammadmaqbool83@gmail.com">Email me</a><a class="btn s" href="https://www.linkedin.com/in/muhammadali-748114368">LinkedIn</a><a class="btn s" href="https://github.com/MUHAMMADALI83">GitHub</a><a class="btn s" href="https://www.kaggle.com/alimuhammad83">Kaggle</a></div></div></section>
+<footer>© <span id="yr"></span> Muhammad Ali · Lahore, Pakistan</footer>
+<script>
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.getElementById('yr').textContent=new Date().getFullYear();
+const heat=document.getElementById('heat');
+const vals=[.25,.32,.4,.48,.55,.6,.66,.72,.78,.82,.88,.92,.95];
+for(let r=0;r<5;r++)vals.forEach((v,c)=>{const d=document.createElement('div');heat.appendChild(d);const lvl=Math.min(1,Math.max(.1,v+(Math.random()-.5)*.25));setTimeout(()=>{d.style.background=`color-mix(in srgb,#1B7F8E ${Math.round(lvl*100)}%,#DCE7EC)`},reduce?0:300+c*70+r*40)});
+document.querySelectorAll('[data-to]').forEach(el=>{const to=+el.dataset.to,suf=el.dataset.suf||'';if(reduce){el.textContent=to+suf;return}const t0=performance.now();(function tick(t){const p=Math.min(1,(t-t0)/1600);el.textContent=Math.round(to*p)+suf;if(p<1)requestAnimationFrame(tick)})(t0)});
+const cv=document.getElementById('net'),ctx=cv.getContext('2d');let pts=[];
+function size(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;pts=Array.from({length:Math.min(60,cv.width/20)},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3}))}
+function frame(){ctx.clearRect(0,0,cv.width,cv.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>cv.width)p.vx*=-1;if(p.y<0||p.y>cv.height)p.vy*=-1;ctx.fillStyle='#1B7F8E';ctx.beginPath();ctx.arc(p.x,p.y,2,0,7);ctx.fill()});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);if(d<120){ctx.strokeStyle=`rgba(27,127,142,${.18*(1-d/120)})`;ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke()}}if(!reduce)requestAnimationFrame(frame)}
+size();frame();addEventListener('resize',size);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('on');io.unobserve(e.target)}),{threshold:.35});document.querySelectorAll('.ln,.sk').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
